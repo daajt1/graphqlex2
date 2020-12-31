@@ -1,0 +1,35 @@
+ type Query {
+  ping: String!
+  messages: [Message!]
+}
+
+type Mutation {
+  createMessage(
+    title: String!,
+    content: String!,
+    author: String!
+  ): Message
+}
+
+type Mutation {
+    createHobby(
+        listHobby: String!,
+        practice: Int,
+        categoryHobby: String!
+    ) : Hobby
+}
+
+type Message {
+  _id: ID!
+  title: String!
+  content: String!
+  author: String!
+}
+
+type Hobby {
+    _id: ID!,
+    listHobby: String!,
+    practice: Int,
+    categoryHobby: String!
+}
+ 
